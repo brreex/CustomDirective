@@ -1,5 +1,12 @@
 <ng-content>
 </ng-content>
 <ul>
+  <li *ngFor="let hobby of hobbies">{{hobby}}</li>
+</ul>
+<h1>Upper Directive </h1>
+<ul>
   <li upper *ngFor="let hobby of hobbies">{{hobby}}</li>
 </ul>
+<div mycolor>
+  Click To Change Color
+</div>

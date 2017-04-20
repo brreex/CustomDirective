@@ -4,10 +4,7 @@ import { Directive,ElementRef,Renderer,TemplateRef,ViewContainerRef } from '@ang
   selector: '[upper]'
 })
 export class UpperDirective {
-  constructor(private element:ElementRef,
-              private renderer:Renderer
-              ) {
-    renderer.setElementStyle(element.nativeElement,'text-transform','uppercase');
-
+  constructor(private element:ElementRef,private renderer:Renderer) {
+      renderer.setElementStyle(element.nativeElement,'text-transform','uppercase');
   }
 }

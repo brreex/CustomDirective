@@ -6,12 +6,16 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { FavoriteComponent } from './favorite/favorite.component';
 import { UpperDirective } from './upper.directive';
+import { MycolorDirective } from './mycolor.directive';
+import { MyvisibilityDirective } from './myvisibility.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     FavoriteComponent,
-    UpperDirective
+    UpperDirective,
+    MycolorDirective,
+    MyvisibilityDirective
   ],
   imports: [
     BrowserModule,
