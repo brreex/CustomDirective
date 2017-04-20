@@ -1,12 +1,15 @@
-import { Directive } from '@angular/core';
+import { Directive,TemplateRef,ViewContainerRef,Input } from '@angular/core';
 
 @Directive({
-  selector: '[appMyvisibility]'
+  selector: '[myvisibility]'
 })
 export class MyvisibilityDirective {
-
-  constructor() {
-    
+  constructor(private templeate:TemplateRef<any>, private viewref:ViewContainerRef) {
   }
-
+  @Input() set myvisibility (condition:boolean){
+      if(condition)
+        this.viewref.createEmbeddedView(this.templeate);
+      else
+       this.viewref.clear();
+  }
 }

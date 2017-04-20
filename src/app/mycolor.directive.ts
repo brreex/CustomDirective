@@ -9,7 +9,10 @@ export class MycolorDirective {
   index:number = 0;
   constructor(private element:ElementRef,private renderer:Renderer) {
   }
-
+  
+  @HostBinding('style.color') get setColor(){
+    return this.color;
+  }
    @HostListener('click')
    myclorClicked(){
      if(this.index>this.colorarray.length)
@@ -17,8 +20,5 @@ export class MycolorDirective {
       this.color = this.colorarray[this.index];
       //this.renderer.setElementStyle(this.element.nativeElement,'color',this.colorarray[this.index]);
       this.index++;
-  }
-  @HostBinding('style.color') get setColor(){
-    return this.color;
   }
 }
